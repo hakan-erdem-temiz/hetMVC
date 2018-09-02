@@ -1,0 +1,11 @@
+﻿@model hetMVC.ViewModels.RandomMovieViewModel
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+@foreach (var c in Model.Customers)
+{
+    @c.Name;
+}

@@ -1,0 +1,21 @@
+﻿@model hetMVC.ViewModels.RandomMovieViewModel
+@{
+    ViewBag.Title = "Customers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customers</h2>
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>Customers</th>
+    </tr>
+    @foreach (var customer in Model.Customers)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink(@customer.Name, "Details/" + customer.id, "Customers")
+            </td>
+        </tr>
+    }
+</table>

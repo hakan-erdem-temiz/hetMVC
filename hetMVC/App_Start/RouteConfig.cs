@@ -13,6 +13,16 @@ namespace hetMVC
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapMvcAttributeRoutes();
+
+            //I deleted this map beacuse i added MapMvcAttributeRoutes for actions.
+            //routes.MapRoute(
+            //    name:"MoviesByReleaseDate",
+            //    url:"movies/released/{year}/{month}",
+            //    defaults:new {controller="Movies",action="ByReleaseDate"},
+            //    constraints: new {year=@"2018|2019",month=@"\d{2}"}
+            //    );
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
